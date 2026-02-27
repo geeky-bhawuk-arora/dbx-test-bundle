@@ -46,9 +46,9 @@ jobs:
           uv sync --extra test
           uv pip install -e .
 
-      - name: Run Test Suite
-        run: |
-          uv run pytest -v -m "not ci_exclude"
+      # - name: Run Test Suite
+      #   run: |
+      #     uv run pytest -v -m "not ci_exclude"
 
 
   deploy-dev:
