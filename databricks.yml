@@ -29,16 +29,16 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://dbc-8806ae94-e7ec.cloud.databricks.com
+      host: https://adb-7405615037605183.3.azuredatabricks.net/
     variables:
       catalog: workspace
       schema: ${workspace.current_user.short_name}
   prod:
     mode: production
     workspace:
-      host: https://dbc-8806ae94-e7ec.cloud.databricks.com
+      host: https://adb-7405615037605183.3.azuredatabricks.net/
       # We explicitly deploy to /Workspace/Users/bhawukarora042@gmail.com to make sure we only have a single copy.
-      root_path: /Workspace/Users/bhawukarora042@gmail.com/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Workspace/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: workspace
       schema: prod
